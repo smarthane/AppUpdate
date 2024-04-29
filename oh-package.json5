@@ -1,9 +1,9 @@
 {
   "name": "appupdate",
   "version": "1.0.0",
-  "description": "Please describe the basic information.",
+  "description": "AppUpdate是基于ArkTS封装的HarmonyOS通用、功能全面的版本升级组件（也可做为自定义弹窗使用）。",
   "main": "",
-  "author": "",
+  "author": "smarthane",
   "license": "",
   "dependencies": {
   },

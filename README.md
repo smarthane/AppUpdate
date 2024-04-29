@@ -3,24 +3,20 @@
 ## 简介
 > AppUpdate是基于ArkTS封装的HarmonyOS通用、功能全面的版本升级组件（也可做为自定义弹窗使用）。目前只支持配置弹窗样式以及跳转到华为应用市场，后续会配合使用华为应用市场提供的升级SDK进行版本校验。
 > 
-![https://gitee.com/smarthane/appupdate/blob/master/screenshots/operation.gif](operation.gif)
+![operation.gif](screenshots%2Foperation.gif)
 
 ## 示例截图
-|                                简单调用方法                                 |                               强制升级                               |                                    有副标题                                     |
-|:---------------------------------------------------------------------:|:----------------------------------------------------------------:|:---------------------------------------------------------------------------:|
-| <img src="screenshots/ic_screenshot_2.jpeg" width="300" height="400"> | <img src="screenshots/ic_screenshot_1.jpeg" width="300" height="400"> |      <img src="screenshots/ic_screenshot_3.jpeg" width="300" height="400">       |
-|                              点击取消、升级按钮回调                              |                               设置文本大小颜色                               |                                  设置文本最大高度                                   |
-|  :----------------------------------------------------------------:   |:----------------------------------------------------------------:|     :----------------------------------------------------------------:      |
-|   <img src="screenshots/ic_screenshot_1.jpeg" width="300" height="400">    | <img src="screenshots/ic_screenshot_5.jpeg" width="300" height="400"> |      <img src="screenshots/ic_screenshot_6.jpeg" width="300" height="400">       |
-|                             样式：STYLE_RED                              |                               样式：STYLE_BLUE                               |                               样式：STYLE_DRAGON                               |
-|  :----------------------------------------------------------------:   |:----------------------------------------------------------------:|     :----------------------------------------------------------------:      |
-|   <img src="screenshots/ic_screenshot_8.jpeg" width="300" height="400">    | <img src="screenshots/ic_screenshot_9.jpeg" width="300" height="400"> |      <img src="screenshots/ic_screenshot_10.jpeg" width="300" height="400">       |
-|                             样式：STYLE_LAMP                             |                               样式：STYLE_CANVAS                               |                                    自定义样式                                     |
-|  :----------------------------------------------------------------:   |:----------------------------------------------------------------:|     :----------------------------------------------------------------:      |
-|   <img src="screenshots/ic_screenshot_11.jpeg" width="300" height="400">   | <img src="screenshots/ic_screenshot_12.jpeg" width="300" height="400"> |      <img src="screenshots/ic_screenshot_13.jpeg" width="300" height="400">       |
-|                                自定义布局组件                                |                               自定布局提示弹窗                               |                                    自定布局输入弹窗                                     |
-|  :----------------------------------------------------------------:   |:----------------------------------------------------------------:|     :----------------------------------------------------------------:      |
-|   <img src="screenshots/ic_screenshot_14.jpeg" width="300" height="400">   | <img src="screenshots/ic_screenshot_15.jpeg" width="300" height="400"> |      <img src="screenshots/ic_screenshot_16.jpeg" width="300" height="400">       |
+|                                 简单调用方法                                 |                               强制升级                               |                                    有副标题                                     |
+|:----------------------------------------------------------------------:|:----------------------------------------------------------------:|:---------------------------------------------------------------------------:|
+| <img src="screenshots/ic_screenshot_2.jpeg" width="300" height="380">  | <img src="screenshots/ic_screenshot_1.jpeg" width="300" height="380"> |      <img src="screenshots/ic_screenshot_3.jpeg" width="300" height="380">       |
+|                              点击取消、升级按钮回调                               |                               设置文本大小颜色                               |                                  设置文本最大高度                                   |
+| <img src="screenshots/ic_screenshot_1.jpeg" width="300" height="380">  | <img src="screenshots/ic_screenshot_5.jpeg" width="300" height="380"> |      <img src="screenshots/ic_screenshot_6.jpeg" width="300" height="380">       |
+|                              样式：STYLE_RED                              |                               样式：STYLE_BLUE                               |                               样式：STYLE_DRAGON                               |
+| <img src="screenshots/ic_screenshot_8.jpeg" width="300" height="380">  | <img src="screenshots/ic_screenshot_9.jpeg" width="300" height="380"> |      <img src="screenshots/ic_screenshot_10.jpeg" width="300" height="380">       |
+|                             样式：STYLE_LAMP                              |                               样式：STYLE_CANVAS                               |                                    自定义样式                                     |
+| <img src="screenshots/ic_screenshot_11.jpeg" width="300" height="380"> | <img src="screenshots/ic_screenshot_12.jpeg" width="300" height="380"> |      <img src="screenshots/ic_screenshot_13.jpeg" width="300" height="380">       |
+|                                自定义布局组件                                 |                               自定布局提示弹窗                               |                                    自定布局输入弹窗                                     |
+| <img src="screenshots/ic_screenshot_14.jpeg" width="300" height="380"> | <img src="screenshots/ic_screenshot_15.jpeg" width="300" height="380"> |      <img src="screenshots/ic_screenshot_16.jpeg" width="300" height="380">       |
 ## 下载安装
 ```shell
 ohpm install @smarthane/appupdate  
@@ -712,6 +708,7 @@ class DialogItem {
 
 ````
 
+一、AppUpdateDialogModel
 /**
  * 弹窗 Model
  */
@@ -761,6 +758,22 @@ export class AppUpdateDialogModel {
   // 副标题文字颜色
   subTitleFontColor?: ResourceColor;
 }
+
+二、AppUpdateHelper
+//显示升级弹窗
+AppUpdateHelper.showDialog(mModel: AppUpdateDialogModel)
+//隐藏升级弹窗
+AppUpdateHelper.hideDialog()
+
+//跳转到应用市场
+//@param uiContext
+//@param mBundleName 应用包名
+AppUpdateHelper.jumpToStore(uiContext: common.UIAbilityContext, mBundleName: string)
+
+//获取 versionName
+AppUpdateHelper.getVersionName()
+//获取 versionCode
+AppUpdateHelper.getVersionCode()
 ````
 ## 目录结构
 ````

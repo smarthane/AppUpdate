@@ -13,12 +13,10 @@ import {
 import { AppUpdateHelper } from './AppUpdateHelper';
 
 let dialogController: CustomDialogController | null
-let isForce: boolean = false;
 const uiContext = getContext(this) as common.UIAbilityContext
 
 @Component
 export struct AppUpdateComponent {
-
   show(model: AppUpdateDialogModel) {
     this.hide();
     dialogController = new CustomDialogController({
@@ -27,12 +25,15 @@ export struct AppUpdateComponent {
       }),
       alignment: model.alignment || DialogAlignment.Center,
       customStyle: true,
-      autoCancel: model.autoCancel || false
+      autoCancel: model.autoCancel || false,
+      // 强制更新不让退出弹窗
+      cancel: () => {
+        if (model.isForce !== undefined && model.isForce) {
+          dialogController?.open();
+        }
+      }
     });
     dialogController?.open();
-    if (model.isForce !== undefined) {
-      isForce = model.isForce;
-    }
   }
 
   hide() {
@@ -40,13 +41,6 @@ export struct AppUpdateComponent {
       dialogController?.close();
       dialogController = null;
     }
-  }
-
-  onBackPress(): boolean | void {
-    if (isForce) {
-      return true;
-    }
-    return false;
   }
 
   build() {

@@ -3,7 +3,7 @@
 ## 简介
 > AppUpdate是基于ArkTS封装的HarmonyOS通用、功能全面的版本升级组件（也可做为自定义弹窗使用）。目前只支持配置弹窗样式以及跳转到华为应用市场，后续会配合使用华为应用市场提供的升级SDK进行版本校验。
 > 
-![https://gitee.com/smarthane/appupdate/raw/master/screenshots/operation.gif](operation.gif)
+![https://gitee.com/smarthane/appupdate/blob/master/screenshots/operation.gif](operation.gif)
 
 ## 下载安装
 ```shell
@@ -695,7 +695,7 @@ class DialogItem {
 【详细可以参看[AppUpdateModel.ets](https://gitee.com/smarthane/appupdate/blob/master/library/src/main/ets/components/AppUpdateModel.ets)文件描述】
 
 ````
-
+一、AppUpdateDialogModel
 /**
  * 弹窗 Model
  */
@@ -745,6 +745,22 @@ export class AppUpdateDialogModel {
   // 副标题文字颜色
   subTitleFontColor?: ResourceColor;
 }
+
+二、AppUpdateHelper
+//显示升级弹窗
+AppUpdateHelper.showDialog(mModel: AppUpdateDialogModel)
+//隐藏升级弹窗
+AppUpdateHelper.hideDialog()
+
+//跳转到应用市场
+//@param uiContext
+//@param mBundleName 应用包名
+AppUpdateHelper.jumpToStore(uiContext: common.UIAbilityContext, mBundleName: string)
+
+//获取 versionName
+AppUpdateHelper.getVersionName()
+//获取 versionCode
+AppUpdateHelper.getVersionCode()
 ````
 ## 目录结构
 ````

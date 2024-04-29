@@ -348,14 +348,6 @@ struct Index {
     .setTitleName("应用版本升级弹窗")
 
   /**
-   * 强制升级需要调用此方法 防止 返回时关闭弹窗
-   * @returns
-   */
-  onBackPress() {
-    return AppUpdateHelper.onBackPress();
-  }
-
-  /**
    * 自定布局版本升级页面
    */
   @Builder

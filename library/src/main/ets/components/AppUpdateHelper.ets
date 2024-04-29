@@ -36,19 +36,9 @@ export class AppUpdateHelper {
   }
 
   /**
-   * 监听返回按钮
-   * @returns
-   * onBackPress
-   * @returns
-   */
-  public static onBackPress(): boolean | void {
-    if (AppUpdateHelper.mAppUpdateComponent) {
-      return  AppUpdateHelper.mAppUpdateComponent.onBackPress();
-    }
-  }
-  /**
    * 跳转到应用市场
-   * @param mBundleName
+   * @param uiContext
+   * @param mBundleName 应用包名
    */
   public static jumpToStore(uiContext: common.UIAbilityContext, mBundleName?: string): void {
     if (mBundleName == undefined) {
