@@ -1,0 +1,20 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "module description"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "description"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "label"
+    },
+    {
+      "name": "update_content",
+      "value": "1.全新升级，让您的体验更上一层楼，尽在本次产品升级中。\n2.超越旧版，全新升级，为您带来更出色的体验。\n3.鸿蒙来了！“鸿”鹄志远，一举千里。承“蒙”厚爱，不负期待。\n4.每一次升级，都是对完美的追求。本次全新升级，更是如此。"
+    }
+  ]
+}

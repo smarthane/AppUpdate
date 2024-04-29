@@ -1,0 +1,23 @@
+{
+  "license": "Apache-2.0",
+  "devDependencies": {},
+  "keywords": [
+    "OpenHarmony",
+    "HarmonyOS",
+    "AppUpdate",
+    "CustomDialog",
+    "Dialog"
+  ],
+  "author": {
+    "name": "smarthane"
+  },
+  "name": "@smarthane/appupdate",
+  "description": "AppUpdate是基于ArkTS封装的HarmonyOS通用、功能全面的版本升级组件（也可做为自定义弹窗使用）。",
+  "ohos": {
+    "org": "opensource"
+  },
+  "main": "index.ets",
+  "repository": "https://gitee.com/smarthane/appupdate",
+  "version": "1.0.0",
+  "dependencies": {}
+}
