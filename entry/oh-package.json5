@@ -7,7 +7,7 @@
   "license": "",
   "dependencies": {
     '@smarthane/titlebar': '1.0.2',
-    '@smarthane/AppUpdate': 'file:../library'
+    '@smarthane/appupdate': 'file:../docs/library.har'
   }
 }
 

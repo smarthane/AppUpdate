@@ -80,7 +80,7 @@ AppUpdateHelper.showDialog({
 【详细可以参考[工程entry模块下面的示例代码](https://gitee.com/smarthane/appupdate/blob/master/entry/src/main/ets/pages/Index.ets)】
 
  ```
-import { AppUpdateDialogModel, AppUpdateHelper, DialogStyleEnum } from '@smarthane/AppUpdate'
+import { AppUpdateDialogModel, AppUpdateHelper, DialogStyleEnum } from '@smarthane/appupdate'
 import promptAction from '@ohos.promptAction'
 import { TitleBar } from '@smarthane/titlebar'
 import { common } from '@kit.AbilityKit'

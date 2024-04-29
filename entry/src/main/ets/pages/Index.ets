@@ -1,4 +1,4 @@
-import { AppUpdateDialogModel, AppUpdateHelper, DialogStyleEnum } from '@smarthane/AppUpdate'
+import { AppUpdateDialogModel, AppUpdateHelper, DialogStyleEnum } from '@smarthane/appupdate'
 import promptAction from '@ohos.promptAction'
 import { TitleBar } from '@smarthane/titlebar'
 import { common } from '@kit.AbilityKit'
